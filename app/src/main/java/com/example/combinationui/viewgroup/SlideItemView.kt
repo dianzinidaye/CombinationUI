@@ -75,7 +75,7 @@ class SlideItemView : ViewGroup,  View.OnTouchListener {
             return true
         }
 
-      return  super.onInterceptTouchEvent(ev)
+      return  true
     }
 
 
@@ -223,10 +223,11 @@ class SlideItemView : ViewGroup,  View.OnTouchListener {
         when (event?.action) {
             MotionEvent.ACTION_DOWN->{
                 Log.i("TAG", "ACTION_DOWN ");
+                parent.requestDisallowInterceptTouchEvent(true)
                downX = x
             }
             MotionEvent.ACTION_MOVE -> {
-                parent.requestDisallowInterceptTouchEvent(true)
+                parent.requestDisallowInterceptTouchEvent(false)
             }
             MotionEvent.ACTION_UP->{
                 Log.i("TAG", "ACTION_UP ");
