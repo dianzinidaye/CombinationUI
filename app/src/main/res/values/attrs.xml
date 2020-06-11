@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GoodsNumberEditor" >
+        <attr name="baseValue" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="FlowLayout">
+        <attr name="verticalMargin" format="dimension"/>
+        <attr name="horizontalMargin" format="dimension"/>
+        <attr name="verticalPadding" format="dimension"/>
+        <attr name="horizontalPadding" format="dimension"/>
+    </declare-styleable>
+    
+    <declare-styleable name="KeypadView">
+        <!--行数-->
+        <attr name="rowNb" format="integer"/>
+        <!--列数-->
+        <attr name="columnNb" format="integer"/>
+        <!--文字尺寸-->
+        <attr name="textSz" format="dimension"/>
+        <!--按下背景颜色-->
+        <attr name="pressedBgColor" format="color"/>
+        <!--普通状态背景颜色-->
+        <attr name="normalBgColor" format="color"/>
+        <attr name="itemMargin" format="dimension"/>
+    </declare-styleable>
+    
+    <declare-styleable name="SlideItemView">
+        <attr name="function" >
+            <flag name="delete" value="0x01"/>
+            <flag name="add" value="0x02"/>
+            <flag name="top" value="0x3"/>
+        </attr>
+    </declare-styleable>
+</resources>
